@@ -1,4 +1,4 @@
-package duc.ancuc.demoelasticsearch.repo.entities;
+package duc.ancuc.demoelasticsearch.repo.database.entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

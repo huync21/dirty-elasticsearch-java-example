@@ -1,7 +1,7 @@
 package duc.ancuc.demoelasticsearch.controller;
 
-import duc.ancuc.demoelasticsearch.repo.BRepo;
-import duc.ancuc.demoelasticsearch.repo.entities.B;
+import duc.ancuc.demoelasticsearch.repo.database.BRepo;
+import duc.ancuc.demoelasticsearch.repo.database.entities.B;
 import duc.ancuc.demoelasticsearch.services.ElasticSearchService;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;

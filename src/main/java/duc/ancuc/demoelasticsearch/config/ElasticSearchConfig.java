@@ -15,6 +15,7 @@ import org.elasticsearch.client.RestClient;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.elasticsearch.repository.config.EnableElasticsearchRepositories;
 
 import javax.net.ssl.SSLContext;
 import java.io.IOException;
@@ -23,6 +24,7 @@ import java.security.KeyStoreException;
 import java.security.NoSuchAlgorithmException;
 
 @Configuration
+@EnableElasticsearchRepositories
 public class ElasticSearchConfig {
     @Value("${elasticsearch.server-url}")
     private String elasticsearchUrl;
