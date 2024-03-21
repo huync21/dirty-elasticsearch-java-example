@@ -1,0 +1,16 @@
+spring:
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:postgresql://localhost:5432/social-media?reWriteBatchedInserts=true&currentSchema=public
+    username: admin
+    password: admin
+    driverClassName: org.postgresql.Driver
+
+elasticsearch:
+    server-url: "https://localhost:9200"
+    api-key: X29mdVhvNEJmakFUWjVIam8zUVg6QjJITXZ1LUpTLWUydmoyaTdSS1U3QQ==

@@ -1,0 +1,26 @@
+version: '3.5'
+
+services:
+  postgres:
+    container_name: social-media
+    image: ${DB_IMAGE_NAME:-postgres}:${DB_IMAGE_VERSION:-14}
+    ports:
+      - ${POSTGRES_HOST_PORT:-5432}:${POSTGRES_CONTAINER_PORT:-5432}
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-admin}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-admin}
+      PGDATA: /data/postgres
+      POSTGRES_DB: ${POSTGRES_DB:-social-media}
+    volumes:
+      - postgres:/var/lib/postgresql
+      - ./docker/postgresql/init-database.sql:/docker-entrypoint-initdb.d/init-database.sql
+    restart: unless-stopped
+    networks:
+      - postgres
+
+networks:
+  postgres:
+    driver: bridge
+
+volumes:
+  postgres:
